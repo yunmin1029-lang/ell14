@@ -1,0 +1,133 @@
+Thorlabs Optical Parameter Monitor Change Log Since Initial Release (V1.0)
+
+V7.0 Oct-2025
+    New:
+    - Support for power meter PM100Dx. 
+    - Rename application to "Optical Parameter Monitor".
+    Bug Fixes:
+	- Set NI Visa USB devices search off as default. (Enable with check box on search setup)
+	- Analog Resposivity control didnt appear for PM101. (Fixed)
+	- Driver switcher tool didnt list devices without a serial number. (Fixed)
+	- PM6x with laser lose conncetion on switching main tap. (Fixed)
+	- PM6x with laser, display laser option with NI-Visa driver. (Fixed)
+	- Terminal didnt set default settings for COM Port connection. (Fixed)
+
+V6.5 Jul-2025
+   New:
+   - Support Wavelength Meters WM20x
+	
+V6.1 Jul-2024
+    Bug Fixes:
+	- Prevent to install wrong firmware over ethernet connection. (PM103E, PM5020)
+	
+V6.0 May-2024
+    New:
+	- Support for PM60/PM61 Series. 
+	Bug Fixes:
+	- PM160 couldn't be connected correctly. (Fixed)
+	- Fast measurement did not work for PM5020. (Fixed)
+	
+V5.1 Feb-2024
+	- New: Supports ERM200
+	Bug Fixes:
+	- Devices with the PID of ERM, SPCNT or some Power meter in the serial number were recognized incorrectly.
+	- User Calibration: three decimal places for the factor.
+	
+V5.0  May-2023
+    New:
+	- Support for Single Photon Counter.
+    - I2C functions in TLPMX Driver for PM5020 power meter.
+	- Scope view for PM5020 with a Thermopile.
+	- Sensor Head-Temperature is now display on the measurement view. (Power Meter)
+	- Load PM100D .csv files.
+    Bug Fixes:
+    - Graph Record: Some power meters didn't record the correct measurement type.(e.g. PM160T) (Fixed)	
+	- COM ports were not display, if some port was corrupt. (Fixed)
+	
+V4.1  Nov-2022
+    New:
+	- Added Script Writer to send "script code" to the PM103.
+    - Command-line tool to communicate with the power meter with SCPI-commands.	
+    Bug Fixes:
+	- Edit name and color wasn't visible. (Fixed)
+	- Tuning view for 4Q sensor didn't display dot and position values for PM400 and PM102. (Fixed)
+	- UI freeze on connecting more than two devices on start. (Fixed)
+	- LabView Samples for TLPMX Library were missed. (Fixed)
+	- "Time Out" problem with PM400, PM101 and PM102 solved.
+	
+V4.0  Jul-2022
+    New:
+	- Support for PM5020.
+	Bug  Fixes:
+    - DFU Driver for PM100USB was not installed. (Fixed)
+	- Values ot of range were set to infinity. (Fixed)
+	- PM103 scope Chart label displays zero for the measurement value. (Fixed)
+	- LabVIEW VIs were not compatible with earlier versions. (Fixed)
+	- PM16x devices can't connect the OPM, when the device use the NI-Visa driver. (Fixed)
+	
+V3.1  April-2021
+	Bug  Fixes:
+	- Ranges for PM16x Power Meters were display incorrectly. (Fixed)
+	
+V3.0   March-2021
+        New features:
+        - Added support for the PM103x power meter interfaces
+        - Zoomt Out Y Axis on right click
+        - Record data in the graph view
+        - Monitoring: Now is possible to set the decimal separator.
+        - Graph\Statistcs View: Now is possible to record the data to the maximal speed of the power meter.
+        - Data Viewer: The data viewer can now load the record data from the graph view.
+        - Help view: Now is possible to set the decimal separator and delimiter for the .csv files.
+        Bug Fixes:
+        - Graph chart slow down on saving 1000 seconds of data. (Fixed)
+        - Rename the device leads to an incorrect behaviour in the monitoring table. (Fixed)
+        Changes:
+        - Monitoring: Minimal interval to save data is now 0.1 seconds
+        - Monitoring: Delimiters list changed. Pilcrow Sign is not supported anymore. 
+
+V2.2   March-2020
+        New features:
+        - Added Calibration Wizard for performing user calibrations
+        Bug Fixes:
+        - The OPM installation package installs the USB driver for DFU Mode correctly.
+        - When the firmware update stops due to a time out, the OPM will try to update the firmware again.
+        
+V2.1   December-2019
+        New Features:
+        - Added support for the PM102x power meter interfaces
+        - Added support for the S44x thermal position sensors
+        - Integrated Firmware Update Tool into the OPM application
+        - Added Python wrapper class and example for the communication with Thorlabs power meters. 
+        Changes:
+        - Help Menu has a new design and functionality.
+        - The selection and search for serial devices was merged with the search for USB devices.
+
+V2.0   Aug-2019
+        Bug Fixes:
+        - For the pyro sensor the NaN values don't increase the samples counter.
+        - The beam size in Y-direction for rectangular beam shape is saved\loaded.
+        - The Graph and Statistics view display the recorded time correctly.
+        - Input Filter state setting is displayed for all power meters with this hardware capability.
+        - For the x axis in the graph view the place between the time stamps is now equidistant.
+        - Application checks for updates if this option was actvated.
+        - PM160/PM16 show the correct range.
+        New Features:
+        - Added support for power meters that use the NI-Visa USB driver
+        - Added support for the PM101x power meter interfaces
+        - Added support for TSP01 and TSP01 rev. B.
+        - Added support for thermopile 4Q sensors
+        - The wavelength value for the PM100USB and PM16 is saved
+        - Each device has now a color indicator in the main view.
+        - Auto Range can be disabled for the PM160/PM16
+        - A confirmation dialog is opened when the user tries to close the application during logging.
+        Changes:
+        - Statistics\Graph saved files have the same formatting for the numbers as the monitoring file.
+        - Only the selected device can be disconnected from the user interface.
+
+V1.1   September-2018
+        - Adapter type can be selected in the settings.(Adapter)
+        - Trigger Level was added to the settings. (Pyro Sensor)
+        - Bug: Application crash when a device is disconnected. (Fixed)
+
+V1.0   March-2018
+        Initial release
